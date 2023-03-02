@@ -8,20 +8,34 @@
     <title>Login - Campagne</title>
 
     <link rel="stylesheet" href="/design/default.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
+
+    <div class="results">
+        @if (Session::get('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
+
+            @if (Session::get('fail'))
+                <div class="alert alert-danger">
+                    {{ Session::get('fail') }}
+                </div>
+            @endif
+    </div>
+
     <section class="wrapper">
         <div class="container-fostrap">
             <div>
                 <img src="/images/mlc.jpg" class="fostrap-logo"/>
                 <h1 class="heading">
-                   EDM Recharge
+                   Payement
                 </h1>
             </div>
             <div class="content">
@@ -43,7 +57,7 @@
                                     </p>
                                 </div>
                                 <div class="card-read-more">
-                                    <a href="/" class="btn btn-link btn-block">
+                                    <a href="/pay" class="btn btn-link btn-block">
                                         Effectuez votre paiement
                                     </a>
                                 </div>
@@ -56,7 +70,7 @@
                               </a>
                                 <div class="card-content">
                                     <h4 class="card-title">
-                                        <a href="#">
+                                        <a href="/isago">
                                               Credit ISAGO
                                       </a>
                                     </h4>
@@ -65,7 +79,7 @@
                                     </p>
                                 </div>
                                 <div class="card-read-more">
-                                    <a href="" class="btn btn-link btn-block">
+                                    <a href="/isago" class="btn btn-link btn-block">
                                         Acheter
                                     </a>
                                 </div>
@@ -99,5 +113,7 @@
     </section>
 
 </body>
+
+
 
 </html>

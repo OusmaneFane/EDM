@@ -148,7 +148,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-info">
                 <div class="container-fluid">
                   <!-- Logo or site name -->
-                  <a class="navbar-brand mx-auto" href="#">CampaiGn</a>
+                  <a class="navbar-brand mx-auto" href="#">EDM</a>
 
                   <!-- Search bar -->
                   <form class="d-flex ms-auto">

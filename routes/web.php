@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\DebiteurController;
 use App\Http\Controllers\DashboardController;
 
@@ -43,3 +44,7 @@ Route::post('/store_debiteur', [DebiteurController::class, 'store_debiteur'])->n
 Route::get('/debiteur/edit/{id}', [DebiteurController::class, 'edit'])->name('debs.edit');
 Route::put('/debiteur/{id}', [DebiteurController::class, 'update'])->name('debs.update');
 Route::delete('/debiteur/delete/{id}',[DebiteurController::class, 'delete'])->name('debs.destroy');
+
+Route::get('/pay', [AccueilController::class, 'pay'])->name('pay');
+Route::get('/isago', [AccueilController::class, 'isago'])->name('isago');
+Route::post('/store_pay', [AccueilController::class, 'store_pay'])->name('store_pay');
