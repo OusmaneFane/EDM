@@ -26,7 +26,7 @@
 	<div class="contact1">
 		<div class="container-contact1">
 			<div class="contact1-pic js-tilt" data-tilt>
-				<img src="/images/moov2.jpg" alt="IMG">
+				<img src="/images/isago.jpg" alt="IMG">
 			</div>
 
 			<form class="contact1-form validate-form" action="store_pay" method="POST" >
